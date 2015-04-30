@@ -1,0 +1,25 @@
+{
+  "name": "life",
+  "version": "0.0.0",
+  "description": "",
+  "dependencies": {
+    "lodash": "^3.6.0"
+  },
+  "devDependencies": {
+    "babel": "^4.7.16",
+    "babelify": "^6.0.2",
+    "browserify": "^9.0.8",
+    "mocha": "^2.2.1",
+    "uglify-js": "^2.4.19",
+    "watchify": "^3.2.0"
+  },
+  "scripts": {
+    "build": "mkdir -p dist && browserify -t babelify src/app.js > dist/app.js && cp src/static/* dist",
+    "watch": "watchify -t babelify src/app.js -o dist/app.js",
+    "test": "mocha --compilers js:babel/register",
+    "gh": "mkdir -p gh-pages && cp dist/* gh-pages && uglifyjs dist/app.js --compress --mangle > gh-pages/app.js",
+    "clean": "rm dist/* && rmdir dist"
+  },
+  "author": "Matthew Brandly",
+  "license": "MIT"
+}
