@@ -1,6 +1,9 @@
 import React from 'react'
 import { range } from 'lodash'
 import classNames from 'classnames'
+import injectTapEventPlugin from 'react-tap-event-plugin'
+
+injectTapEventPlugin()
 
 const component = React.createClass({
   toggleCell(x, y) {
@@ -17,7 +20,7 @@ const component = React.createClass({
           'life-cell': true,
           alive: cell.isAlive()
         })
-        return <td className={classes} key={x} onClick={this.toggleCell.bind(this, x, y)}></td>
+        return <td className={classes} key={x} onTouchTap={this.toggleCell.bind(this, x, y)}></td>
       })
       return <tr className="life-row" key={y}>{cells}</tr>
     })

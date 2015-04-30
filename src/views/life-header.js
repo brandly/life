@@ -1,4 +1,7 @@
 import React from 'react'
+import injectTapEventPlugin from 'react-tap-event-plugin'
+
+injectTapEventPlugin()
 
 const component = React.createClass({
   getInitialState() {
@@ -29,8 +32,8 @@ const component = React.createClass({
           {//<input value={this.state.speed} />
           }
           {this.state.intervalId ?
-            (<button onClick={this.pause}>pause</button>) :
-            (<button onClick={this.play}>play</button>)
+            (<button onTouchTap={this.pause}>pause</button>) :
+            (<button onTouchTap={this.play}>play</button>)
           }
         </div>
       </div>
