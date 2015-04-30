@@ -2,6 +2,7 @@
   "name": "life",
   "version": "0.0.0",
   "description": "",
+  "private": true,
   "dependencies": {
     "classnames": "^1.2.2",
     "lodash": "^3.6.0",
