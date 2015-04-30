@@ -58,12 +58,19 @@
 
       .life-board {
         margin: 0 auto;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+         -khtml-user-select: none;
+           -moz-user-select: none;
+            -ms-user-select: none;
+                user-select: none;
       }
 
       .life-cell {
         width: 40px;
         height: 40px;
         border: 1px solid #EEE;
+        cursor: pointer; /* fixes iOS click events lol */
       }
 
       .life-cell.alive {
