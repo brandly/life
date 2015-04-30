@@ -40,4 +40,18 @@ describe('Life', function () {
     assert.equal(true, life.getCell(0, 1).isAlive())
     assert.equal(true, life.getCell(1, 1).isAlive())
   })
+
+  it('lets blinkers blink', function () {
+    const life = new Life({ width, height })
+
+    life.getCell(1, 0).giveLife()
+    life.getCell(1, 1).giveLife()
+    life.getCell(1, 2).giveLife()
+
+    life.tick()
+
+    assert.equal(true, life.getCell(0, 1).isAlive())
+    assert.equal(true, life.getCell(1, 1).isAlive())
+    assert.equal(true, life.getCell(2, 1).isAlive())
+  })
 })

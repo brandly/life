@@ -4,6 +4,69 @@
     <meta charset="utf-8">
     <title>life</title>
     <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="https://brick.a.ssl.fastly.net/Raleway:400">
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .life-header {
+        font-family: 'Raleway', sans-serif;
+        color: #333;
+        height: 60px;
+        padding: 0 20px;
+      }
+
+      .life-header h1 {
+        display: inline-block;
+        float: left;
+        line-height: 60px;
+        font-size: 24px;
+      }
+
+      .life-header button {
+        background: none;
+        outline: none;
+        border: 1px solid #EEE;
+        height: 40px;
+        margin: 10px 0;
+        font-family: 'Raleway', sans-serif;
+        color: #333;
+        font-size: 20px;
+        padding: 0 12px;
+        border-radius: 4px;
+        transition: all 200ms ease-in-out;
+        cursor: pointer;
+      }
+
+      .life-header button:hover {
+        box-shadow: 1px 1px 1px rgba(232, 232, 232, .5);
+      }
+
+      .life-header button:active {
+        box-shadow: none;
+        transform: translate(1px, 1px);
+      }
+
+      .life-settings {
+        display: inline-block;
+        float: right;
+      }
+
+      .life-board {
+        margin: 0 auto;
+      }
+
+      .life-cell {
+        width: 40px;
+        height: 40px;
+        border: 1px solid #EEE;
+      }
+
+      .life-cell.alive {
+        background-color: #666;
+      }
+    </style>
   </head>
   <body>
     <div id="game"></div>

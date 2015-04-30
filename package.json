@@ -3,10 +3,12 @@
   "version": "0.0.0",
   "description": "",
   "dependencies": {
-    "lodash": "^3.6.0"
+    "classnames": "^1.2.2",
+    "lodash": "^3.6.0",
+    "react": "^0.13.2"
   },
   "devDependencies": {
-    "babel": "^4.7.16",
+    "babel": "^5.1.13",
     "babelify": "^6.0.2",
     "browserify": "^9.0.8",
     "mocha": "^2.2.1",

@@ -11,4 +11,8 @@ export default class Cell {
   giveLife() {
     this.alive = true
   }
+
+  kill() {
+    this.alive = false
+  }
 }
